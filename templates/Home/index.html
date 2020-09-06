@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE MANIT Student Branch</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 1230px)" href="{% static 'css/phone.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<style>
+    *{
+        transition: 0.2s;
+    }
+</style>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{% static 'img/b2.jpg' %}" title="IEEE" alt="IEEE_NIT-B.com">
+        </div>
+        <ul>
+           <li class="item"><a href="{% url 'home' %}">Home</a></li>
+           <li class="item"><a href="#">Events</a></li>
+           <li class="item"><a href="#">Posts</a></li>
+           <li class="item"><a href="#">Reviews</a></li>
+           <li class="item"><a href="#">About Us</a></li>
+           <li class="item"><a href="#">Contact Us</a></li>
+
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">IEEE MANIT Student Branch</h1>
+       <p>IEEE is the world's largest professional association dedicated to advancing technological<br>
+           innovation and excellence for the benefit of humanity.
+       </p>
+       <p>IEEE and it's member inspire a global community through IEEE's highly<br> cited publications,conferences,
+           technology standards<br> and educational activities. </p>
+    </section>
+
+    <section class="services-container">
+        <!-- <h1 class="h-primary center"></h1> -->
+        <div id="services">
+
+            <div class="box">
+                <img src="{% static 'img/b5.jpg' %}" width="233px" height="250px" alt="">
+                <h2 class="h-secondary center">IEEE MSB</h2>
+                <p class=" first center">IEEE is,and remains, strongly committed to diversity,equity,and inclusion and
+                    we see no place for hatred and discrimination in our communities.Advancing technology for humanity.</p>
+                <details>
+                    <summary>Membership</summary>
+                    Join<br>
+                    Renew<br>
+                    IEEE Collaborate<br>
+                </details>
+                <details>
+                    <summary>Get Involved</summary>
+                    Societies<br>
+                    Councils<br>
+                </details>
+                <details>
+                    <summary>Connect With IEEE</summary>
+                    IEEE Newsroom<br>
+                    IEEE Media kit<br>
+                </details>
+            </div>
+
+            <div class="box">
+                <h2 class="h-secondary center">Upcoming Event</h2>
+                <img src="{% static 'img/c3.jpg' %}" width="233px" height="250px" alt="">
+                <h2 class="h-secondary center">SAMWAD'20</h2>
+                <!-- <h2 class=""h-secondary center">SAMWAD'20</h2> -->
+                <p class="second center">Date:10/09/2020</p>
+                <p class="second center"> Time:11.00 A.M.</p>
+                <p class="second center">Venue:N.T.B</p>
+                <a class="btn" style="text-align: center; text-decoration: none;"
+                   href="{% url 'registration' %}">Register Here</a>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'img/b5.jpg' %}" width="233px" height="250px" alt="">
+                <!-- <div class="covid">
+                    <img src="img/q1.jpeg" width="233px" height="50px"alt="">
+                </div> -->
+                <h2 class="h-secondary center"> OJEMB-Fast track</h2>
+                <p class=" third center">IEEE Open Journal of Engineering in Medicine and
+                    Biology has initiated a fast-track review and publication mechanism for
+                    COVID-19 related research and analysis.Think your work might qualify?</p>
+                <details>
+                    <summary>Type of work</summary>
+                    Database<br>
+                    Technology report<br>
+                    Scientific report<br>
+                </details>
+                <details>
+                    <summary>OJEMB Templates</summary>
+                    Editorial Template<br>
+                    Science-letter <br>
+                    Technology-letter <br>
+                </details>
+                <!-- <details>
+                    <summary>Connect With IEEE</summary>
+                    IEEE Newsroom<br>
+                    IEEE Media kit<br>
+                </details> -->
+            </div>
+
+        </div>
+    </section>
+
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-items">
+                <a href="https://apple.com"><img src="{% static 'img/t1.png' %}" alt="our client"></a>
+            </div>
+            <div class="client-items">
+                <a href="https://microsoft.com"><img src="{% static 'img/t2.png' %}" alt="our client"></a>
+            </div>
+            <div class="client-items">
+                <a href="https://spotify.com"><img src="{% static 'img/t3.png' %}" alt="our client"></a>
+            </div>
+            <div class="client-items">
+                <a href="https://amazon.com"><img src="{% static 'img/t4.png' %}" alt="our client"></a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="center">
+            copyright &copy; www.ieee_msb.com. 
+        </div>
+    </footer>
+
+    {% if message %}
+<script>
+        window.alert("Form submitted successfully")
+</script>
+ {% endif %}
+
+</body>
+</html>
